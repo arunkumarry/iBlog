@@ -1,0 +1,21 @@
+<div id="wrapper">
+<p id="notice"><%= notice %></p>
+<div class="show-image">
+<%= image_tag(@blog.image, height: 300, width: 400) %><br/><br/>
+</div>
+<div class="show-title">
+<p>
+  <h2><%= @blog.title %></h2>
+</p>
+</div>
+<div class="show-body">
+<p>
+  <p><%= @blog.body %></p>
+</p>
+</div>
+<div class="shared-buttons">
+<%= link_to 'Edit', edit_blog_path(@blog), class: "button", style: "font-weight: 600;" %> |
+<%= link_to 'Back', blogs_path, class: "button", style: "font-weight: 600;" %>
+</div>
+</div>
+<div id="bg"></div>

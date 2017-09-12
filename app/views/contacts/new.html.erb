@@ -1,0 +1,41 @@
+<div id="wrapper">
+        <!-- Contact -->
+        <%= form_for(@contact, html: {class: 'form-horizontal'}) do |f| %>
+          <article id="contact">
+            <h2 class="major">Contact</h2>
+            <form method="post" action="#">
+              <div class="field half first">
+                <label for="name" style="font-weight: 600;">Name</label>
+                <%= f.text_field :name, class: 'form-control', style: "color: white;
+font-weight: 600;" %>
+              </div>
+              <div class="field half">
+                <label for="email" style="font-weight: 600;">Email</label>
+                <%= f.text_field :email, class: 'form-control', style: "color: white;
+font-weight: 600;" %>
+              </div>
+              <div class="field">
+                <label for="message" style="font-weight: 600;">Message</label>
+                <%= f.text_area :message, class: 'form-control', style: "font-style: inherit;
+background-color: transparent;
+color: white;
+font-weight: 600;
+height: 150px;" %>
+              </div>
+              <ul class="actions" >
+                <li><%= f.submit "Send", style: "font-weight: 600;" %></li>
+                <li><input type="reset" value="Reset" style="font-weight: 600;" /></li>
+              </ul>
+            </form>
+            
+            <ul class="icons">
+              <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+              <li><a href="https://www.facebook.com/chinnu.arun.94" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+              <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+              <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+          </article>
+          <% end %>
+</div>
+
+<div id="bg"></div>

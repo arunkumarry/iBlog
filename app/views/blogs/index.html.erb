@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+<div id="wrapper">
+<div class="row">
+<div class="col-md-6 text-center">
+<h1>Blogs</h1>
+</div>
+<div class="col-md-6 text-center">
+<%= link_to 'New Blog', new_blog_path, class: "btn btn-default" %>
+</div>
+</div>
+<div class="container">
+  <% @blogs.each do |blog| %>
+    <div class="well">
+    <div class="row">
+    <div class="col-md-3">
+          <%= image_tag(blog.image, height: 200, width: 200) %>
+    </div>
+    <div class="col-md-8">
+          <h2 class="title"><%= blog.title %></h2>
+          <br/>
+          <!-- <p class="content"><%= blog.body[0,300] %></p> -->
+            <% if blog.body.length > 300 %>
+              <p class="content"><%= truncate(blog.body, length: 300) %><br/>
+              <%= link_to '...Read more', blog, class: "btn btn-default" %>
+            <% else %>
+              <%= blog.body %></p>
+            <% end %>
+          <br/>
+    </div>
+          <%= link_to 'Show', blog, class: "btn btn-default" %><br/><br/>
+          <%= link_to 'Edit', edit_blog_path(blog), class: "btn btn-default"  %><br/><br/>
+          <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %>
+    </div>
+    </div>
+  <% end %>
+</div>
+<br>
+
+</div>
+
+<!-- BG -->
+      <div id="bg"></div>
+

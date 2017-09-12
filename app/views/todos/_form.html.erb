@@ -1,0 +1,69 @@
+<div>
+<%= form_for(@todo, html: {class: 'form-horizontal'}) do |f| %>
+  <% if @todo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+
+      <ul>
+      <% @todo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+          <!-- Contact -->
+            <article id="contact">
+              <!-- <h2 class="major">Contact</h2> -->
+              <form method="post" action="#">
+                <div class="field half first">
+                  <label for="name" style="font-weight: 600; font-size: 16px;">Name</label>
+                  <%= f.text_field :title, class: 'form-control', style: "color: white;
+  font-weight: 600;" %>
+                </div>
+                <div class="field half">
+                  <label for="email" style="font-weight: 600; font-size: 16px;">Email</label>
+                  <%= f.text_field :email, class: 'form-control', style: "color: white;
+  font-weight: 600;" %>
+                </div>
+                <div class="field">
+                  <label for="message" style="font-weight: 600; font-size: 16px;">TO - DO</label>
+                  <%= f.text_area :notes, class: 'form-control', style: "font-style: inherit;
+  background: transparent;
+  color: white;
+  font-weight: 600;
+  height: 150px;" %>
+                </div>
+                <ul class="actions">
+                  <li><%= f.submit "Create TO-DO", style: "font-weight: 600;" %></li>
+                  <li><input type="reset" value="Reset" style="font-weight: 600;"></li>
+                </ul>
+              </form>
+              <ul class="icons">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+              </ul>
+            </article>
+  <!-- <div class="field form-group">
+    <%#= f.label :title, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-10">
+      <%#= f.text_field :title, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="field form-group">
+    <%#= f.label :notes, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-10">
+      <%#= f.text_area :notes, class: 'form-control' %>
+    </div>
+  </div>
+  <div class="actions form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit %>
+    </div>
+  </div>
+<%# end %>
+ -->
+<% end %>
+</div>
