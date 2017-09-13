@@ -123,6 +123,7 @@ GEM
     paperclip-ffmpeg (1.2.0)
       paperclip (>= 2.5.2)
       rails
+    pg (0.21.0)
     public_suffix (3.0.0)
     puma (3.10.0)
     rack (2.0.3)
@@ -220,6 +221,7 @@ DEPENDENCIES
   paperclip (~> 5.0.0)
   paperclip-av-transcoder
   paperclip-ffmpeg
+  pg
   puma (~> 3.0)
   rails (~> 5.0.1)
   sass-rails (~> 5.0)
